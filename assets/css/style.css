@@ -1,0 +1,50 @@
+body{
+	text-align: center;
+	margin-top: 10%;
+	background-color: black;
+}
+h1{
+	color:yellow;
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+h2{
+	font-size:40px;
+	color: red;
+	margin-bottom: 30px
+}
+p{
+	font-size: 20px;
+color: white;
+margin-top: 15px;
+margin-bottom: 15px;
+}
+.container{
+	border-color: green;
+	border-width: 3px;
+	border-style: solid;
+	margin-bottom: 50px;
+	margin-top: -100px;
+}
+.row{
+border-color: yellow;
+	border-width: 2px;
+	border-style: solid;
+}
+.col-sm-12{
+	border-color: red;
+	border-width: 5px;
+	border-style: solid;
+}
+button{
+	margin:10px;
+}
+#timer{
+	color: red;
+}
+#start{
+	object-position: center;
+	height: 400%;
+	width:400%;
+	margin-bottom: 400px;
+}
