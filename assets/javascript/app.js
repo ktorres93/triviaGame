@@ -17,7 +17,7 @@ var timerRunning = false;
 
 var timer = {
     time: 5,
-
+    //when you hit start
     start: function() {
         if (!timerRunning) {
             intervalId = setInterval(timer.count, 1000);
@@ -27,72 +27,82 @@ var timer = {
             $("#results").hide();
         }
     },
-
+    //countdown
     count: function() {
 
         timer.time--;
         console.log(timer.time);
         $("#display").html(timer.time);
-
+        //time up code
         if (timer.time === 0) {
-            alert("times up!");
             timerRunning = false;
             timer.time = 5;
+            clearInterval(intervalId);
+            $("#all").hide();
+            $("#results").show();
         }
     },
-
+    // when you hit submit
     submit: function() {
         $("#all").hide();
         $("#results").show();
         clearInterval(intervalId);
         timerRunning = false;
-        time: 5;
-    }
+        timer.time = 5;
+        //question check
+   //      var score = 0;
+   //      var numOfQuestions = 5;
+
+		 // for (var i = 1; i <= numOfQuestions; i++);
+   //      if (eval("options" + i) == " ") {
+   //          alert("you missed question number " + i);
+   //      }
+   //      for (var i = 1; i <= numOfQuestions; i++) {
+   //          if eval("options" + i) == ansArr[i - 1]) {
+   //          score++;
+   //      }
+   //  }
+
+}
+
+
+
 };
 
 
 
-function timeUp() {
-
-    if (timer.time === 0) {
-        alert("times up!");
-        timerRunning = false;
-    }
-
-    timeUp();
 
 
 
 
-    // function rightAns() {
+// function rightAns() {
 
-    //     if () {
-    //         correct++;
-    //         answered++;
-    //     } else {
-    //         unanswered++
-    //     }
+//     if () {
+//         correct++;
+//         answered++;
+//     } else {
+//         unanswered++
+//     }
 
-    // }
+// }
 
-    // function wrongAns() {
+// function wrongAns() {
 
-    //     if () {
-    //         incorrect++;
-    //         answered++;
-    //     } else {
-    //         unanswered++
-    //     }
-    // }
+//     if () {
+//         incorrect++;
+//         answered++;
+//     } else {
+//         unanswered++
+//     }
+// }
 
-    // function reset() {
+// function reset() {
 
-    // 	if(timer.time = 0){
-    // 		time
-    // 	}
+// 	if(timer.time = 0){
+// 		time
+// 	}
 
-    // }
-};
+// }
 // }
 
 // THIS IS FOR HARD
