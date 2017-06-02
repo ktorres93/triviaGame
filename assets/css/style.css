@@ -4,7 +4,7 @@ body{
 	background-color: black;
 }
 h1{
-	color:yellow;
+	color:red;
 	font-size: 50px;
 	margin-bottom: 30px;
 }
@@ -39,12 +39,9 @@ border-color: yellow;
 button{
 	margin:10px;
 }
-#timer{
-	color: red;
+#display{
+	color: yellow;
 }
 #start{
 	object-position: center;
-	height: 400%;
-	width:400%;
-	margin-bottom: 400px;
 }

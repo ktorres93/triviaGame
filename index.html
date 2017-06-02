@@ -11,12 +11,17 @@
 		
 	</head>
 	<body>
+		
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
+					<button id="start"> start </button>
 					<h1>VIDEO GAME TRIVIA </h1>
 				</div>
 			</div>
+		</div>
+		<div class="container" id="all">
+			
 			<div class="row">
 				<div class="col-sm-12">
 					<h2 id="display"> timer </h2>
@@ -129,7 +134,17 @@
 			</div>
 		</div>
 	</div>
-	<div> <button id="start"> start </button> </div>
+
+	<div class="row" id="results">
+			<div class="col-sm-12">
+				<h1> Results </h1>
+				<p id="correctAns">  correct answers: </p> 
+				<p id="incorrectAns">  incorrect answers: </p> 
+				<p id="unansweredAns">  unanswered answers: </p> 
+				
+			</div>
+		</div>
+	</div>
 	<!-- javascript -->
 	<script src= "assets/javascript/app.js"></script>
 	<!-- jquery -->

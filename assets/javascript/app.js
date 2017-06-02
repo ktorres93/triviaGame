@@ -1,6 +1,8 @@
 window.onload = function() {
     $("#submit").on("click", timer.submit);
     $("#start").on("click", timer.start);
+    $("#all").hide();
+    $("#results").hide();
 };
 
 
@@ -21,6 +23,8 @@ var timer = {
             intervalId = setInterval(timer.count, 1000);
             timerRunning = true;
             console.log(timer.time)
+            $("#all").show();
+            $("#results").hide();
         }
     },
 
@@ -29,25 +33,36 @@ var timer = {
         timer.time--;
         console.log(timer.time);
         $("#display").html(timer.time);
-    },
-    submit: function() {
 
+        if (timer.time === 0) {
+            alert("times up!");
+            timerRunning = false;
+            timer.time = 5;
+        }
+    },
+
+    submit: function() {
+        $("#all").hide();
+        $("#results").show();
         clearInterval(intervalId);
         timerRunning = false;
         time: 5;
-    }};
-
-     function timeUp() {
-
-        if (timer.time = 0) {
-            alert("times up!");
-            timerRunning = false;
-        }
-
-      timeUp();
+    }
+};
 
 
-    
+
+function timeUp() {
+
+    if (timer.time === 0) {
+        alert("times up!");
+        timerRunning = false;
+    }
+
+    timeUp();
+
+
+
 
     // function rightAns() {
 
